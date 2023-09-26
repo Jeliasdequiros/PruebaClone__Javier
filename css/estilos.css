@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+    --margenGrid-S: 20px;
+    --margenGrid-D: 40px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+
+.contenedor{
+    height: 100vh;
+    background-size: cover;
+    
+    /* Fondo de dispositivos */
+    /* Retina Display */
+    /* Móvil */
+    @media only screen and (min-width: 320px) and (max-width: 500px) and (orientation: portrait) {
+        @media (-webkit-min-device-pixel-ratio: 1){
+            background-image: url(../img/smartphone/Smartphone.webp);
+        }
+        
+        @media (-webkit-min-device-pixel-ratio: 2) {
+            background-image: url(../img/smartphone/Smartphone@2x.webp);
+        }
+        
+        @media (-webkit-min-device-pixel-ratio: 3) {
+            background-image: url(../img/smartphone/Smartphone@3x.webp);
+        }
+    }
+    
+    /* Escritorio */
+    @media only screen and (min-width: 1000px) {
+        background-image: url(../img/desktop/Desktop.webp);
+        @media (-webkit-max-device-pixel-ratio: 2) {
+            background-image: url(../img/desktop/Desktop@2x.webp);
+        }
+    }
+}
